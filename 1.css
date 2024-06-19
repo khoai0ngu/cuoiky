@@ -1,0 +1,583 @@
+:root {
+    --main-color: #6DBFE2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+header .header-content {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 0;
+    z-index: 1;
+    color: white;
+    padding-top: 10px;
+    width: 1300px;
+}
+
+header .header-top {
+    padding: 10px;
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    color: black; 
+}
+
+header .header-top .logo {
+    position: relative;
+    width: 135px;
+    height: auto;
+}
+
+header .header-top>div>ul {
+    display: flex;
+}
+
+header .header-top>ul {
+    border: 1px solid none;
+    padding: 5px 10px;
+}
+
+header .header-top a {
+    color: black;
+    font-weight: bold;
+}
+
+.flag-icon {
+    width: 20px; 
+    height: auto;
+    margin-right: 5px; 
+    vertical-align: middle; 
+}
+
+.nav-item a i.fa-chevron-down {
+    color: rgb(13, 99, 170);
+}
+
+.nav-item {
+    padding: 10px 15px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.nav-item:hover {
+    background-color: rgba(0, 0, 0, 0.463);
+}
+
+header .login-btn {
+    border: 2px solid black;
+    margin: 0 15px;
+}
+
+header .login-btn i {
+    padding-right: 10px; 
+    color: rgb(13, 99, 170); 
+}
+
+header .login-btn:hover {
+    background-color: rgba(204, 196, 196, 0.463);
+}
+
+header .register-btn {
+    width: 90px;
+    background-color: rgb(16, 151, 214);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .register-btn:hover {
+    background-color: rgb(13, 99, 170);
+}
+
+header .option {
+    padding: 10px;
+    position: relative;
+    z-index: 100;
+    color: gray; 
+}
+
+header .option ul {
+    display: flex;
+    gap: 20px;
+}
+
+header .option li {
+    font-weight: bold;
+    border: 1px solid none;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+header .option li:hover {
+    background-color: rgba(170, 160, 160, 0.463);
+}
+
+header .option a {
+    color: grey;
+}
+
+header .option a i {
+    font-size: 10px; 
+}
+
+.submenu {
+    width: 200px; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition-duration: 0.5s;
+    z-index: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.submenu li {
+    padding: 10px 0;
+    border-bottom: 0px solid black;
+}
+
+.submenu li:hover{
+    background-color: rgba(170, 160, 160, 0.463);
+}
+
+.submenu li a {
+    display: flex;
+    align-items: center;
+    color: gray;
+}
+
+.submenu li a i {
+    padding-right: 10px; 
+}
+
+.support-menu.active .submenu,
+.more-menu.active .submenu {
+    transform: scale(1, 1);
+}
+
+.currency-submenu {
+    width: auto; 
+    max-width: 500px; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition-duration: 0.5s;
+    z-index: 3;
+}
+
+.currency-submenu table {
+    width: 500px; 
+    border-collapse: collapse;
+}
+
+.currency-submenu th, .currency-submenu td {
+    padding: 5px 10px;
+    text-align: left;
+}
+
+.currency-submenu th + th, .currency-submenu td + td {
+    border-left: 1px solid #ddd;
+}
+
+.currency-submenu a {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    color: black; 
+}
+
+.currency-submenu img {
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.currency-submenu a:hover {
+    background-color: rgba(170, 160, 160, 0.463);
+}
+
+.currency-menu.active .currency-submenu {
+    transform: scale(1, 1);
+}
+
+main {
+    margin-top: 120px;
+}
+
+main .custom-banner {
+    width: 100%;
+    height: 350px;
+    background-color: #0770cd;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 350px;
+    padding-top: 8px;
+    position: relative; /* Add this line to position promo-footer correctly */
+}
+
+main  .banner1,
+main  .banner2,
+main  .banner3 {
+    margin-right: 20px;
+}
+
+main  .banner1 h1 {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 28px;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 40px;
+}
+
+main  .banner1 h2{
+    color: rgba(194, 186, 186,0.8);
+    line-height: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 25px;
+}
+
+main .custom-banner p{
+    color: black;
+}
+
+main  .banner2 img,
+main  .banner3 img {
+    height: 230px; 
+    width: 472px; 
+    object-fit: cover; 
+}
+
+main .promo-footer {
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    font-size: 15px;
+    padding-top: 250px;
+    font-weight: bold;
+}
+
+main .promo-footer a{
+    color: white;
+}
+
+main .promo-text {
+    margin: 0 30px;
+}
+
+main .arrow {
+    font-size: 24px;
+    padding: 0 30px;
+}
+
+main .promo-border {
+    position: absolute;
+    top: calc(250px + 50px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    height: 50px;
+    background-color: rgba(218, 213, 213, 0.9);
+    border: 0px solid black;
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+main .border-text{
+    font-size: 18px;
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+main .border-text a{
+    color: #0770cd;
+    text-decoration: none;
+}
+
+main .border-text i{
+    color: #0770cd;
+    padding-right: 8px;
+}
+
+main .main-box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid black;
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px; 
+}
+
+main .main-box p{
+    color: gray;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+main .input-container {
+    position: relative;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+main .input-container i {
+    position: absolute;
+    top: 45%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #0770cd;
+}
+
+main .input-container input {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+
+main .input-container input::placeholder {
+    color: rgba(99, 94, 94, 0.3);
+    font-weight: bold;
+}
+
+.dropdown-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+}
+
+.dropdown-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dropdown-list th, .dropdown-list td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    color: black;
+}
+
+.dropdown-list tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+
+.main-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.child1 {
+    flex: 1;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+    padding-right: 5px;
+}
+
+main .child1 input {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+
+main .child1 i {
+    position: absolute;
+    top: 48%;
+    left: 35px;
+    transform: translateY(-50%);
+    color: #0770cd;
+}
+
+.child2 {
+    flex: 1;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+    padding-right: 5px;
+}
+
+main .child2 select {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+main .child2 i {
+    position: absolute;
+    top: 48%;
+    left: 35px;
+    transform: translateY(-50%);
+    color: #0770cd;
+}
+
+main .child2 option{
+    font-weight: bold;
+}
+
+.child3 {
+    flex: 1;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+}
+
+main .child3 h4{
+    font-size: 15px;
+    color: black;
+}
+
+main .child3 p{
+    color: black;
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+main .sub-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+main .guest {
+    flex: 2;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+}
+
+main .guest select {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+main .guest option{
+    font-weight: bold;
+}
+
+main .search-button {
+    flex: 1;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+    padding-top: 36px;
+}
+
+main .search-button input {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(228, 73, 11);
+    color: white;
+}
+
+main .search-button input:hover{
+    background-color: rgb(177, 55, 7);
+}
